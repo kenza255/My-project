@@ -1,0 +1,559 @@
+@import url(https://fonts.google.com/specimen/Playfair?query=playfair);
+
+body {
+    font-family: 'Playfair';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+
+}
+
+
+
+/*header style*/
+
+header {
+    font-family: 'Playfair';
+    color: #2f2f2f;
+    background-color: white;
+    border-bottom: 1px black solid;
+    position: sticky;
+    padding: 0px 20px 0px 20px;
+}
+
+.signup {
+    display: flex;
+    gap: 30px;
+
+
+}
+
+
+.signup a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
+
+.link {
+    font-weight: 600px;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+
+
+
+
+/* div subtitle content*/
+
+.subtitle {
+    padding: 64px;
+    row-gap: 10px;
+    align-content: left;
+}
+
+
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    color: #757575;
+    font-style: italic;
+}
+
+/* job section */
+
+/*job card style */
+
+.gallery {
+    background-color: #fbf4f4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+fullad {
+    padding-bottom: 26px;
+    border: 1px solid black;
+    align-items: center;
+
+}
+
+.jobtitle h3 {
+    font-size: 20px;
+    text-align: center;
+
+}
+
+
+.location {
+    font-size: 14px;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    justify-content: space-between;
+
+
+
+
+}
+
+
+.short_description {
+    font-size: 16px;
+    min-height: 253px;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: justify;
+}
+
+.job-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+
+}
+
+.type {
+    text-align: left;
+}
+
+.details-btn {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1, 4rem;
+    height: fit-content
+}
+
+/*Modal style */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 50%; /* Centre la modale au milieu de la page*/
+    top: 50%; /* Centre la modale au milieu de la page*/
+    transform: translate(-50%, -50%); /* Centre la modale au milieu de la page*/
+    width: 80%;
+    overflow-y: auto; /* Permet le scroll dans la modale en cas de contenu plus long*/
+    max-height: 70%;/* Permet le scroll dans la modale en cas de contenu plus long*/
+    background-color: #fbf4f4;
+    padding-top: 91px;
+    padding-bottom: 91px;
+    padding-left: 78px;
+    padding-right: 78px;
+    border: 1px solid black;
+    box-shadow: 12px 4px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+
+}
+
+
+.close {
+    position: absolute;
+    right: 45px;
+    top:45px;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold
+}
+
+.close, .previously{
+    position: absolute;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold
+}
+
+.close{
+    right: 45px;
+    top:45px;
+}
+
+.previously{
+    left: 45px;
+    top:45px;
+}
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.job-details{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.titledate{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: -60px;
+}
+
+.titledate h1{
+    max-width: calc(100% - 180px);
+}
+
+.plus{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.infloc {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.infcon {
+    width: fit-content;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pub-date {
+    font-style: italic;
+
+}
+
+.fulldes {
+    text-align: justify;
+}
+
+.apply-btn {
+background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1, 4rem;
+    height: 68px;
+    width: 100%;
+    align-content: center;
+
+}
+
+/*forms */
+
+.container {
+    background-color: #fbf4f4;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.formscontainer div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+
+}
+
+input[type=text],
+textarea {
+    padding: 12px 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #fbf4f4;
+    border-radius: 8px;
+
+}
+
+.hidden{
+    display:none
+}
+
+.display-content{
+    width:100%;
+}
+
+.formscontainer {
+    width: 80%;
+    background-color: white;
+    padding-top: 27px;
+    padding-left: 19px;
+    padding-right: 19px;
+    border-radius: 15px;
+    flex-direction: column;
+    width: calc(100% - 160px);
+}
+
+
+
+.sendbtn {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1, 4rem;
+    height: fit-content
+}
+
+.forms {
+    width: 80%;
+}
+
+.applicationForm div{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px 10px 0px;
+}
+
+
+/*footer*/
+
+footer {
+    height: fit-content;
+    flex-shrink: 0;
+    color: #2f2f2f;
+    background-color: white;
+    border-top: 1p solid #e5e5e5;
+}
+
+
+
+
+.nav__title {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+
+
+.footer__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    max-width: fit-content;
+    background-color: beige;
+    border-radius: 100px;
+    font-size: 15px;
+    padding: 0 1.3em;
+}
+
+.footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer li {
+    line-height: 30px;
+    /*espace entre les lignes*/
+}
+
+.footer__nav {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.footer__nav>* {
+    flex: 1;
+    margin-right: 2px;
+}
+
+.nav__ul a {
+    color: #050505;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo_container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        border-bottom: 1px black solid;
+    }
+
+    .logo {
+        width: 135px;
+    }
+
+    .gallery {
+        background-color: #fbf4f4;
+        display: flex;
+        justify-content: center;
+        gap: 35px;
+        padding-top: 35px;
+        padding-bottom: 35px;
+
+
+    }
+
+    .job-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    fullad {
+        width: 75%;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 992px) {
+    header {
+        border-bottom: 1px black solid;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+    }
+
+    .signup {
+
+        gap: 30px;
+
+
+    }
+
+
+    .signup a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+
+
+
+
+    .logo {
+        width: 135px;
+        height: 135px;
+    }
+
+    .link {
+        font-weight: 600px;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .gallery {
+        background-color: #fbf4f4;
+        display: flex;
+        justify-content: center;
+        gap: 35px;
+        padding-top: 35px;
+        padding-bottom: 35px;
+
+
+    }
+
+    fullad {
+        box-shadow: 12px 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+
+
+
+}
+
+@media screen and (min-width: 992px) {
+    header {
+        border-bottom: 1px black solid;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+    }
+
+    .signup {
+        gap: 30px;
+
+
+    }
+
+
+    .signup a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+
+
+
+
+    .logo {
+        width: 135px;
+        height: 135px;
+    }
+
+    .link {
+        font-weight: 600px;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .gallery {
+        background-color: #fbf4f4;
+        display: flex;
+        justify-content: center;
+        gap: 35px;
+        padding-top: 35px;
+        padding-bottom: 35px;
+
+
+    }
+
+    fullad {
+        width: 30%;
+        box-shadow: 12px 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+
+
+
+}

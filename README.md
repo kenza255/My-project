@@ -1,52 +1,71 @@
-# Bienvenue sur mon GitHub !
+*Group_project* by Kenza & Julien
+
+#  👋 Welcome on our Job Board project : 
+
+# HigHire  💼 🕴️
 
 
 
-## À propos de moi
+## What is HigHire ? 
 
-Je suis une étudiante en reconversion au sein du programme Pré-MSc d’Epitech Lyon, passionnée par le développement web. Après avoir acquis une expérience en gestion de PME et commerce international, j'ai décidé de me tourner vers la tech, un secteur en constante évolution.
+It's a job board portal designed for being really user-friendly  and designed for both job seeker lookin for high quality company where they can grow professionnally and also for company that are looking for high quality employees ! 
 
-## Compétences
+## Where can you find the final prject ? 
 
-- **Langages et technologies :**
-  - HTML
-  - CSS
-  - JavaScript
-  - PHP
-  - MySQL
-  - Java
-  - Bash
-  - Git
+You can have access to our final project on back branch (default) following an error of naming (main branch was our branch test and not the real main you know what I want to mean right ? 😂)
 
-- **Compétences transversales :**
-  - Organisation et rigueur
-  - Adaptabilité
-  - Esprit d'équipe et sens du service
+## Features
 
-## Projets
+### For Job Seeker 
 
-### Job Board
+- They can have access to multiples online advertisements 
+- They can easily apply to any jobs without being logged or create an account
+- Apply only with their name, email and a motivation message 
+- They can create an account 
 
-Au cours de ma piscine intensive, j'ai eu l'opportunité de développer un projet de **Job Board** en collaboration avec mes camarades. Ce projet m'a permis d'intégrer le front-end et le back-end, mettant en pratique mes compétences techniques.
+### For Company
+- Company's recruiter can custom their own advertisements with specific requirements 💰💪📄 and description 📝 
+- Any advertisement will be automaticly be linked to company's email and application from Job Seeker will be rerouted to it's mailbox 📫
 
-### Sites Web pour Événements Personnels
-Je souhaite également développer des sites web qui serviraient de **faire-part** pour des événements personnels tels que mariages, anniversaires ou baptêmes. Ces sites incluraient :
-- Une page récapitulative de l'événement
-- Un formulaire pour confirmer la présence des invités
-- Une urne électronique pour les contributions financières
-- Un livre d'or électronique pour laisser des messages et souvenirs
-  
-## Ce que je recherche
 
-Je suis à la recherche d'une alternance dès janvier 2025, où je pourrai mettre à profit mes compétences en gestion tout en continuant à me perfectionner dans le développement web. 
+### OTHER 
+-Responsive Design : you can have access to our web site with any device ! 📱
 
-## Contact
 
-N'hésitez pas à me contacter pour échanger sur des opportunités ou des projets !
+## Technologies💻 
 
-📍 **Secteur** : Lyon et sa périphérie  
-📆 **Disponibilité** : À partir de janvier 2025
+### FRONT-END  
+- HTML
+- CSS
+- JS
 
----
+### BACK-END   
+- Node.js => Express JS
 
-Merci d'avoir visité mon profil ! 🌊
+### DATABASE 
+
+-MY SQL
+
+### HOSTING 
+- LAMP
+
+### TEAM WORKING TOOLS   🛠️ 
+- Github
+
+
+## How to get started ? 
+
+1. clone this repository : git clone https://github.com/EpitechMscProPromo2027/T-WEB-501-LYO_12.git
+
+2. Set up your local server on http://localhost:8080
+
+3. Import files
+
+4. Access the application through your web browser by typing http://localhost/T-WEB-501-LYO_12/Job_board/home.html
+
+
+## Contact Us ! 
+
+For any questions do not hesitate to contact us at julien.lefebvre@epitech.eu and kenza.aouicha@epitech.eu
+
+ENJOY your experience on HigHire !  😄 🎉

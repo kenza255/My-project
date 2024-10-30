@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./fetch_data/elementfetch.js"></script>
+    <title>Apply || HigHire </title>
+
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="container">
+        <div id="forms" class="formscontainer hidden">
+            <h1> You are applying for :</h1>
+            <h2 id="jobtitle"></h2>
+            <form action="http://localhost:8080/appliance/" method="post" id="applicationForm">
+                <input type="hidden" name="adId" id="adId" value="">
+                <input type="hidden" name="companyId" id="companyId" value="">
+                <div class="fname">
+                    <label for="name"> Name</label>
+                    <input type="text" id="name" name="name" placeholder="Name and First name ">
+                </div>
+                <div class="email ">
+                    <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                    <input type="text" id="email" name="email" placeholder="name@example.com">
+                </div>
+                <div class="msg">
+                    <label for="subject">Motivation message : </label>
+                    <textarea id="subject" name="subject" placeholder="Write a motivation text"
+                        style="height:200px"></textarea>
+                </div>
+                <button type="submit" class="sendbtn" id="sendbtn">Send</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        async function fetchUserData(userId) {
+            try {
+                const response = await fetch(`http://localhost:8080/user`);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch user data');
+                }
+                return await response.json();
+            } catch (error) {
+                console.error('Error fetching user data:', error);
+            }
+        }
+
+        async function loadUserData(userId) {
+            const userData = await fetchUserData(userId);
+            if (userData) {
+                document.getElementById('name').value = userData.name;
+                document.getElementById('email').value = userData.email;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const userId = 1; // Remplacez par l'ID réel de l'utilisateur
+            loadUserData(userId);
+        });
+    </script>
+    <div id="footer"></div>
+</body>
+
+</html>

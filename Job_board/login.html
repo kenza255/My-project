@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <script src="./fetch_data/elementfetch.js"></script>
+
+    <title> Login | HigHire </title> <!--mettre le H en big et rajouter sur 2 lignes igh or ire -->
+</head>
+
+
+<body>
+    <!--header section-->
+    <div id="header"></div>
+
+
+
+
+    <main>
+        <div class="forms">
+            <h1>SIGN IN</h1>
+            <form action="http://localhost:8080/user/login" method="POST" id="loginforms" class="loginforms">
+                <div class="emailog">
+                    <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                    <input type="text" id="email" name="email" placeholder="name@example.com">
+                </div>
+
+                <div class="logpsw">
+                    <label for="psw">Password</label>
+                    <input type="password" placeholder="Enter Password" name="password" id="password" required>
+                </div>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                <span class="psw">Forgot <a href="#">password?</a></span> <br>
+
+                <button class="loginbtn" type="submit">Login</button>
+
+            </form>
+        </div>
+
+        <script>
+
+            document.getElementById('loginforms').addEventListener('submit', async (event) => {
+                event.preventDefault(); // pour ne pas recharger la page 
+                const formData = new FormData(event.target);
+                const data = Object.fromEntries(formData);
+
+                try {
+                    const response = await fetch('http://localhost:8080/user/login', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    });
+                    const result = await response.json();
+                    if (!response.ok) {
+                        // pour pop une alert bow et afficher les message d'erreur 
+                        console.error('Erreur:', result.errors || result.error);
+                        alert(result.errors ? result.errors[0].msg : result.error);
+                    } else {
+                        alert(`Welcome${result.userName}`);
+                        // pour qu'une fois enregesitrer ca redirige vers home page 
+                        window.location.href = 'home.html';
+                        console.log(userName)
+                    }
+                } catch (error) {
+                    console.error('Error during request:', error)
+                  
+                }
+            });
+        </script>
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+    <div id="footer"></div>
+
+    <body>
+
+</html>

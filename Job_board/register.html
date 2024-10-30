@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <script src="./fetch_data/elementfetch.js"></script>
+
+    <title>Register || HigHire</title>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <!--register form -->
+    <main>
+        <div class="forms ">
+            <h1>REGISTER</h1>
+            <h2>Please fill in this form to create an account:</h2>
+            <form action="http://localhost:8080/user/register" method="POST" class="containerforms" id="containerforms">
+
+                <div class="info">
+                    <label for="name"> Name</label>
+                    <input type="text" id="name" name="name" placeholder="Name and First Name required ">
+                    <!--FAIRE FCT POUR SI COCHER Job seeker on affiche Name and First Name et si company alors seulement Name dans le placeholder -->
+                </div>
+                <div class="info">
+                    <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                    <input type="text" id="email" name="email" placeholder="name@example.com" required>
+                </div>
+                <div class="info">
+                    <label for="psw">Password</label>
+                    <input type="password" placeholder="Enter Password" name="password" id="psw" required>
+                </div>
+                <div class="info">
+                    <label for="psw-repeat">Confirm Password</label>
+                    <input type="password" placeholder="Confirm Password" name="confirmPassword" id="psw-repeat"
+                        required>
+                </div>
+
+                <label class="role" for="role">You are</label>
+                <div class="role">
+                    <input type="radio" name="role" id="jobseeker" value="jobseeker">
+                    <label for="jseeker">Job Seeker</label>
+
+                    <input type="radio" name="role" id="recruiter" value="recruiter">
+                    <label for="company">Company</label>
+                </div>
+
+
+
+
+                <button type="submit" class="signbtn">Sign Up</button>
+
+
+
+
+            </form>
+        </div> 
+    </main>
+s
+    <div id="footer"></div>
+</body>
+
+</html>
